@@ -30,6 +30,10 @@ export interface ScannedCard {
 export interface ScanOptions {
   enableExpiryExtraction?: boolean;
   enableNameExtraction?: boolean;
+  /** Custom title text displayed in the header center. Default: "Scan the Credit Card" */
+  headerTitle?: string;
+  /** Custom instruction text displayed below the card frame. Default: "Hold your card inside the frame" */
+  instructionText?: string;
 }
 
 export function scanCard(options?: ScanOptions): Promise<ScannedCard | null> {

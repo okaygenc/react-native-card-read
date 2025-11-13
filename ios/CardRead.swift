@@ -49,6 +49,14 @@ class CardRead: NSObject {
     let cardScanSheet = CardScanSheet()
     self.cardScanSheet = cardScanSheet
 
+    // NEW: Extract customizable UI text from options
+    if let headerTitle = options["headerTitle"] as? String {
+      cardScanSheet.headerTitle = headerTitle
+    }
+    if let instructionText = options["instructionText"] as? String {
+      cardScanSheet.instructionText = instructionText
+    }
+
     cardScanSheet.present(from: presentingViewController) { [weak self] result in
       self?.handleScanResult(result)
     }
