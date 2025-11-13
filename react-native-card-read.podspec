@@ -22,10 +22,10 @@ Pod::Spec.new do |s|
 
   s.dependency "React-Core"
 
-  # Dependencies from forked card-reader on GitHub
-  s.dependency "StripeCore", :git => "https://github.com/okaygenc/card-reader.git", :tag => "24.2.0"
-  s.dependency "StripeCameraCore", :git => "https://github.com/okaygenc/card-reader.git", :tag => "24.2.0"
-  s.dependency "StripeCardScan", :git => "https://github.com/okaygenc/card-reader.git", :tag => "24.2.0"
+  # Dependencies from forked card-reader (specify source in Podfile)
+  s.dependency "StripeCore"
+  s.dependency "StripeCameraCore"
+  s.dependency "StripeCardScan"
 
   # Required iOS frameworks
   s.frameworks = 'AVFoundation', 'AVKit', 'CoreML', 'VideoToolbox', 'Vision', 'UIKit'
