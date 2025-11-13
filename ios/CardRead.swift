@@ -56,6 +56,9 @@ class CardRead: NSObject {
     if let instructionText = options["instructionText"] as? String {
       cardScanSheet.instructionText = instructionText
     }
+    if let showFlashButton = options["showFlashButton"] as? Bool {
+      cardScanSheet.showFlashButton = showFlashButton
+    }
 
     cardScanSheet.present(from: presentingViewController) { [weak self] result in
       self?.handleScanResult(result)

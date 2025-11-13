@@ -34,6 +34,8 @@ export interface ScanOptions {
   headerTitle?: string;
   /** Custom instruction text displayed below the card frame. Default: "Hold your card inside the frame" */
   instructionText?: string;
+  /** Show flash/torch button in the top-right corner. Default: false */
+  showFlashButton?: boolean;
 }
 
 export function scanCard(options?: ScanOptions): Promise<ScannedCard | null> {
