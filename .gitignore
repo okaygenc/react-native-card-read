@@ -41,7 +41,6 @@ local.properties
 .settings/
 
 # Build
-lib/
 *.log
 
 # IDE
